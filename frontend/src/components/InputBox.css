@@ -1,0 +1,25 @@
+.input-box-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 300px;
+  }
+  
+  .input-box {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+  }
+  
+  .mic-icon {
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+    color: #555;
+  }
+  
+  .mic-icon:hover {
+    color: #000;
+  }
+  
