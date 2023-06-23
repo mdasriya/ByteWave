@@ -2,24 +2,55 @@
     position: relative;
     display: flex;
     align-items: center;
-    width: 300px;
+    width: 60%;
+    justify-content: center;
+    border: 1px solid #690be4;
+    margin: auto;
+    margin-top: 20px;
+    
+
   }
   
   .input-box {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    width: 100%;
+    width: 70%;
   }
+  
   
   .mic-icon {
     position: absolute;
-    right: 10px;
+    right: 160px;
+    
     cursor: pointer;
     color: #555;
+/* border: 1px solid gray; */
+/* border-radius: 50%; */
+/* padding: 3px; */
   }
   
   .mic-icon:hover {
-    color: #000;
+    color: #02fa38;
+    
   }
-  
+  .question-box{
+    /* border: 1px solid red; */
+    width: 50%;
+    margin: auto;
+    height: auto;
+    text-align:start ;
+  }
+  .submit{
+    border: #ccc;
+   border-radius: 7px;
+    padding: 10px;
+    color: white;
+    text-transform: uppercase;
+    margin: 0px 10px;
+    background-color: rgb(81, 154, 238);
+  }
+  .submit:hover{
+ cursor: pointer;
+    background-color: rgb(28, 124, 233);
+  }
