@@ -1,56 +1,53 @@
-// import React, { useState } from 'react'
+import React, { useState } from 'react';
+import './LoginForm.css';
 
-// const Login = () => {
-//     const [email,setemail]=useState("")
-//     const [pass,setpass]=useState("")
+const Login = () => {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
 
-//     const handleSubmit=(e)=>{
-//         e.preventDefault()
-//         let obj={
-//             email,
-//             pass
-//         }
-//         //console.log(obj)
-//         // fetch("https://outrageous-shoe-dog.cyclic.app/users/login",{
-//         //     method:"POST",
-//         //     headers:{
-//         //         "Content-Type":"application/json"
-//         //     },
-//         //     body:JSON.stringify(obj)
-//         // }).then((res)=>res.json())
-//         // .then((res)=>{
-//         //     const data=localStorage.setItem("token",res.token)
-//         //     console.log(res)
-//         // })
-//         // .catch((err)=>console.log(err))
-//         // setemail("")
-//         // setpass("")
-//     }
-//   return (
-//     <div>
-//       <form action="" onSubmit={(e)=>handleSubmit(e)} >
-//         <h1>Login form</h1>
-//         <input type="text" placeholder='email' name='email' value={email} onChange={(e)=>setemail(e.target.value)}/>
-//         <br />
-//         <input type="password" placeholder='password' name='pass' value={pass} onChange={(e)=>setpass(e.target.value)} />
-//         <br />
-//         <button>submit</button>
-//       </form>
-//     </div>
-//   )
-// }
+  const handleEmailChange = (e) => {
+    setEmail(e.target.value);
+  };
 
-// export default Login
+  const handlePasswordChange = (e) => {
+    setPassword(e.target.value);
+  };
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Add your login logic here
+    console.log('Email:', email);
+    console.log('Password:', password);
+  };
 
-import React from 'react'
-
-function Login() {
-  return (
-    <div>
-        <h1>Login page</h1>
+  return (  
+  <div className="login-form-container">
+      <h2>Login</h2>
+      <form onSubmit={handleSubmit}>
+        <div className="form-group">
+          <label htmlFor="email">Email:</label>
+          <input
+            type="email"
+            id="email"
+            value={email}
+            onChange={handleEmailChange}
+            required
+          />
+        </div>
+        <div className="form-group">
+          <label htmlFor="password">Password:</label>
+          <input
+            type="password"
+            id="password"
+            value={password}
+            onChange={handlePasswordChange}
+            required
+          />
+        </div>
+        <button type="submit">Login</button>
+      </form>
     </div>
-  )
-}
+  );
+};
 
-export default Login
+export default Login;
