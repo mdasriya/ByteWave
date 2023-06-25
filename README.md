@@ -14,7 +14,7 @@
 
 ## Team Members
 
- [OMKAR DHANAVE](https://github.com/omkar231098) 
+ [Omkar Dhanave](https://github.com/omkar231098) 
  
  [Mukesh Dasriya](https://github.com/mdasriya) 
  
