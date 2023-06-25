@@ -32,4 +32,48 @@
 -   Give Test For JAVA Category
 -   Receive Feedback Questions According to Answers By Using Open AI API
 
+## Run Locally
+### Clone this Project
+
+```
+https://github.com/mdasriya/ByteWave
+```
+### Runs the project in the development mode
+
+[http://localhost:5000](http://localhost:5000)
+
+
+### Add Secret Key in .env (Server Side)
+
+```
+OPENAI_API_KEY
+mongoURL
+PORT
+NormalToken
+```
+
+### To Start Frontend
+
+```
+npm run start
+```
+### To Start Backend Server
+
+```
+npm run server
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
