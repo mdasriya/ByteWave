@@ -1,0 +1,66 @@
+@media only screen and (min-width: 400px) and (max-width: 600px) {
+    .container{
+        justify-content:start;
+       width: 100%;
+        text-align: center;
+    }
+    .firstbox{
+        visibility: hidden;
+      }
+      .secondBox{
+       margin-left: -200px;
+      }
+      .countdown Text{
+       margin-left: -120px;
+      }
+           
+  }
+  @media only screen and (min-width: 300px) and (max-width: 399px){
+    .container{
+        justify-content:start;
+       width: 100%;
+        text-align: center;
+    }
+    .firstbox{
+        visibility: hidden;
+      }
+      .secondBox{
+       margin-left: -200px;
+      }
+      .countdown{
+        align-items: start;
+      }
+  }
+  @media only screen and (min-width: 601px) and (max-width: 700px){
+    .container{
+        justify-content:start;
+       width: 100%;
+        text-align: center;
+    }
+    .firstbox{
+        visibility: hidden;
+      }
+      .secondBox{
+       margin-left: -200px;
+      }
+  }
+  @media only screen and (min-width: 701px) and (max-width: 999px){
+    .container{
+        justify-content:start;
+       width: 100%;
+        text-align: center;
+    }
+    .firstbox{
+        visibility: hidden;
+      }
+      .secondBox{
+       margin-left: -200px;
+      }
+  }
+  .branch{
+    transition: transform .2s;
+  }
+
+  .branch:hover{
+    transform: scale(1.1);
+  }

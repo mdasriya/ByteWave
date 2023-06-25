@@ -1,22 +1,43 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import { Box, Button, Flex, Spacer,Alert,
+  } from '@chakra-ui/react';
 
-
-export const Navbar = () => {
+// import logo from "InterviewAI.png"
+import { useNavigate } from 'react-router-dom';
+import logo from "../logo.png"
+function Navbar() {
+     const navigate = useNavigate()
   return (
-    <div style={{
-      width:"80%",
-      display:"flex",
-      justifyContent:"space-arround",
-      margin:"auto",
-  }}>
-      
-      <Link to={"/"}style={{margin:"auto",color:"darkblue",fontSize:"25px"}} >Home</Link>
-      <Link to={"/about"} style={{margin:"auto",color:"darkblue",fontSize:"25px"}} >About</Link>
-      <Link to={"/login"}style={{margin:"auto",color:"darkblue",fontSize:"25px"}} >Login</Link>
-      <Link to={"/singnup"} style={{margin:"auto",color:"darkblue",fontSize:"25px"}} >Singnup</Link>
-      
-
-    </div>
+    <Flex
+      as="nav"
+      align="center"
+      justify="space-between"
+      padding="1rem"
+      bg="gray.800"
+      color="white"
+   
+   
+    >
+      <Box onClick={()=> navigate("/")} cursor={"pointer"}>
+        {/* Replace the 'logo.png' URL with your actual logo image */}
+        <img style={{width:"50px"}} src={logo} alt="Logo" height={24} />
+      </Box>
+      <Box onClick={()=> navigate("/")}>
+        <Box fontSize="lg" fontWeight="bold" cursor={"pointer"}>
+          InterviewAI
+        </Box>
+      </Box>
+      <Spacer />
+      <Box>
+        <Button colorScheme="teal" variant="outline" mr={2}
+        onClick={()=> navigate("/Signup")}
+        >
+          Sign Up
+        </Button>
+        <Button colorScheme="teal" onClick={()=> navigate("/login")}>Login</Button>
+      </Box>
+    </Flex>
   );
-};
+}
+
+export default Navbar;
+
