@@ -87,4 +87,17 @@ npm run server
 
 ![interview page](https://github.com/mdasriya/ByteWave/assets/109202596/69e3879a-0828-4470-996e-a32b3a9c96c2)
 
+### Feedback Given on InterView OPage Below the Answer
+
+
+
+![Feedback Answer](https://github.com/mdasriya/ByteWave/assets/109202596/11b14de5-c42b-4897-a742-9ad2285d6e56)
+
+### Thanks Model
+
+
+![thanks model](https://github.com/mdasriya/ByteWave/assets/109202596/c90d06ce-da91-45c6-9dfa-aa022342f8dc)
+
+
+
 
