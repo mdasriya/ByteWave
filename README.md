@@ -63,17 +63,28 @@ npm run start
 npm run server
 ```
 
+## Screenshots
+### Home Page
 
 
 
 
+![InterviewAI](https://github.com/mdasriya/ByteWave/assets/109202596/a8eccf7f-5ae0-427e-bb0b-18dac796fd69)
 
 
 
+### Register Page
 
 
+![signup](https://github.com/mdasriya/ByteWave/assets/109202596/ceb9e43d-abf0-4635-a698-81b1c7e80d3d)
+
+### Login Page
 
 
+![log](https://github.com/mdasriya/ByteWave/assets/109202596/ceff53b0-4dd9-44ed-8470-d27119a6872e)
 
+### InterView Page
+
+![interview page](https://github.com/mdasriya/ByteWave/assets/109202596/69e3879a-0828-4470-996e-a32b3a9c96c2)
 
 
