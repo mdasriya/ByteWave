@@ -12,6 +12,21 @@
 
 <h3>Welcome to the InterviewAi website, your premier destination for conducting comprehensive interviews in MERN, Node.js, and Java. Harnessing the power of AI, we provide an efficient and seamless experience for evaluating candidates' skills in these cutting-edge technologies.</h3>
 
+## Team Members
+
+ [OMKAR DHANAVE](https://github.com/omkar231098) 
+ 
+ [Mukesh Dasriya](https://github.com/mdasriya) 
+ 
+ [Ankita Lomte](https://github.com/lomteankita) 
+ 
+ [Suryakant Singh](https://github.com/clrsurya11) 
+ 
+
+
+
+
+
 ## Tech Stack
 <p align = "center">
 <img src="https://github.com/mdasriya/ByteWave/assets/109202596/71ecdde7-137d-4d43-882c-774df3096d47" alt="CSS" width="50" height="55"/>
