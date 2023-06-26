@@ -33,7 +33,7 @@ const HomePage = () => {
 
           <Button mt={4} colorScheme='teal' size='md' p={"0px 60px"} onClick={()=> navigate("/interview")}>
             Take Interview
-            <i class='fas fa-arrow-right'></i>
+            
           </Button>
         </Box>
 </Box>
@@ -43,11 +43,17 @@ const HomePage = () => {
 <div>
 <div style={{display:"flex", flexDirection:"column" , rowGap:"10px"}}>
 <div  style={{fontWeight:"bold", fontSize:'30px'}}>Interview Categories</div>
+
+
 <div  style={{display:"flex", flexDirection:"row", textAlign:"center", margin:"auto", width:"85%", justifyContent:"space-between"}}>
   <div className='branch' style={{textAlign:"center", height:"auto", alignItems:"center", padding:"80px", fontWeight:"bold", fontSize:'45px',backgroundColor:"teal", color:"white", borderRadius:"10px"}}>MERN</div>
-  <div className='branch' style={{textAlign:"center", height:"auto", alignItems:"center", padding:"80px", fontWeight:"bold", fontSize:'45px', backgroundColor:"black", color:"white", borderRadius:"10px"}}>JAVA</div>
+
+  <div className='branch' style={{textAlign:"center", height:"auto", alignItems:"center", padding:"80px", fontWeight:"bold", fontSize:'45px',backgroundColor:"black", color:"white", borderRadius:"10px"}}>JAVA</div>
+
   <div className='branch' style={{textAlign:"center", height:"auto", alignItems:"center", padding:"80px", fontWeight:"bold", fontSize:'45px',backgroundColor:"teal", color:"white", borderRadius:"10px"}}>NODE</div>
 </div>
+
+
 </div>
 </div>
 

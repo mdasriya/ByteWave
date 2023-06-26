@@ -4,9 +4,30 @@ color: red;
 margin-left: 10px;
 margin-top: 4px;
 }
-/* .fa-microphone:hover{
-} */
+.fa-microphone:hover{
+  color: green;
+}
 
+.text {
+  font-size: 24px;
+}
+
+
+@keyframes blinking {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.blink {
+  animation: blinking 1s linear infinite;
+}
 
 
 @media only screen and (min-width: 400px) and (max-width: 600px) {

@@ -4,6 +4,7 @@ import { Box, Button, Flex, Spacer,Alert,
 // import logo from "InterviewAI.png"
 import { useNavigate } from 'react-router-dom';
 import logo from "../logo.png"
+import "./nav.css"
 function Navbar() {
      const navigate = useNavigate()
   return (
@@ -22,9 +23,16 @@ function Navbar() {
         <img style={{width:"50px"}} src={logo} alt="Logo" height={24} />
       </Box>
       <Box onClick={()=> navigate("/")}>
-        <Box fontSize="lg" fontWeight="bold" cursor={"pointer"}>
+        {/* <Box fontSize="lg" fontWeight="bold" cursor={"pointer"}>
           InterviewAI
-        </Box>
+        </Box> */}<div class="Glick_container">
+  <div className="Glick_stack" style={{ '--stacks': 3 }}>
+    <span style={{ '--index': 0 }}>InterviewAI</span>
+    <span style={{ '--index': 1 }}>InterviewAI</span>
+    <span style={{ '--index': 2 }}>InterviewAI</span>
+  </div>
+</div>
+
       </Box>
       <Spacer />
       <Box>
