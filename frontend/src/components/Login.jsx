@@ -34,7 +34,7 @@ const Login = () => {
   const handleLoginUser = async () => {
     const userData = { email, password }
 
-    await fetch('http://localhost:5000/user/login', {
+    await fetch('https://interviewaibackend-production.up.railway.app/user/login', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

@@ -23,7 +23,7 @@ const startInterview = async() => {
  if(count>=6){
   navigate("/finished")
  }
-  await fetch(`http://localhost:5000/${track}/questions`, {
+  await fetch(`https://interviewaibackend-production.up.railway.app/${track}/questions`, {
     headers: {
       'Content-Type': 'application/json'
     },
@@ -50,7 +50,7 @@ if(!userResponse){
 // console.log(string);
 
 // Make a POST request to the backend to analyze the user response and provide feedback
-    fetch('http://localhost:5000/chatgpt/retrieve-data', {
+    fetch('https://interviewaibackend-production.up.railway.app/chatgpt/retrieve-data', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
