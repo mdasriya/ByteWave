@@ -53,6 +53,12 @@
 ```
 https://github.com/mdasriya/ByteWave
 ```
+### frontend deployed link
+
+```
+https://frontend-gray-pi.vercel.app/
+```
+
 ### Runs the project in the development mode
 
 [http://localhost:5000](http://localhost:5000)
