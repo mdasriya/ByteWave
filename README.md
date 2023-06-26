@@ -66,7 +66,7 @@ https://frontend-gray-pi.vercel.app/
 ### backend deployed link
 
 ```
-https://crowded-red-pantyhose.cyclic.app
+https://interviewaibackend-production.up.railway.app/
 ```
 
 ### Runs the project in the development mode
