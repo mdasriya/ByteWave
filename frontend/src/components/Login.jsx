@@ -68,7 +68,7 @@ const Login = () => {
       });
   }
   return (
-    <Box border={"1px solid red"}>
+    <Box >
       <Flex
         flexDirection="column"
         width="100wh"

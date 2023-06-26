@@ -19,8 +19,8 @@ const SubmitForm = async() =>{
     let userData = {
         name,email,password
        }
-   
-    await  fetch('http://localhost:5000/user/register', {
+      
+    await  fetch('https://interviewaibackend-production.up.railway.app/user/register', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -30,6 +30,7 @@ const SubmitForm = async() =>{
         .then((response) => response.json())
         .then((res) => {
            console.log(res);
+           if(res.message==="Register user successfully"){
            toast({
             title: 'Account created.',
             description: "We've created your account for you.",
@@ -37,11 +38,21 @@ const SubmitForm = async() =>{
             duration: 5000,
             isClosable: true,
              position: 'top',
-          })
+          })}else{
+            toast({
+              title: 'User is Already Exists.',
+              description: "Please Use Another Email Address",
+              status: 'success',
+              duration: 5000,
+              isClosable: true,
+               position: 'top',
+            })
+          }
           setName("")
           setEmail("")
           setPassword("")
         })
+      
         .catch((error) => {
           console.error('Error submitting user response:', error);
          });
