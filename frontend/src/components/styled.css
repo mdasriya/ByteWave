@@ -1,3 +1,14 @@
+.fa-microphone{
+font-size: 17px;
+color: red;
+margin-left: 10px;
+margin-top: 4px;
+}
+/* .fa-microphone:hover{
+} */
+
+
+
 @media only screen and (min-width: 400px) and (max-width: 600px) {
     .container{
         justify-content:start;

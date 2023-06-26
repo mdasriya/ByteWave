@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import {
   Flex,
@@ -22,8 +22,7 @@ const CFaUserAlt = chakra(FaUserAlt);
 const CFaLock = chakra(FaLock);
 
 const Login = () => {
-  const [count ,setCount] = useState(5)
-  const [render, sertRender] = useState(false)
+
   const navigate = useNavigate()
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
@@ -47,7 +46,7 @@ const Login = () => {
         setEmail("")
         setPassword("")
         setInterval(()=> {
-  setCount((prev) => prev - 1)
+
         },5000)
         setTimeout(() => {
           navigate("/")

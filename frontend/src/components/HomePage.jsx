@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Flex, Spacer, Box, Button, Image, GridItem, Text } from '@chakra-ui/react'
 import test from "../onlinetest.png"
 import { useNavigate } from 'react-router-dom'
@@ -6,6 +6,7 @@ import "./styled.css"
 import Footer from './Footer'
 const HomePage = () => {
   const navigate = useNavigate()
+ 
   return (
     <Box>
     <Flex>
@@ -32,6 +33,7 @@ const HomePage = () => {
 
           <Button mt={4} colorScheme='teal' size='md' p={"0px 60px"} onClick={()=> navigate("/interview")}>
             Take Interview
+            <i class='fas fa-arrow-right'></i>
           </Button>
         </Box>
 </Box>

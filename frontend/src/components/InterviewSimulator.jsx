@@ -5,6 +5,8 @@ import { Box, Button, Alert,Select, Text, Textarea, VStack , AlertIcon,
 import "./styled.css"
 import { useNavigate } from 'react-router-dom';
 const InterviewSimulator = () => {
+  const [transcript, setTranscript] = useState('');
+  const [color ,setColor] = useState("green")
   const [questions, setQuestions] = useState("");
   const [userResponse, setUserResponse] = useState("");
   const [feedback, setFeedback] = useState("")
@@ -41,7 +43,7 @@ const startInterview = async() => {
 }
 
   const submitResponse = () => {
-if(!userResponse){
+if(!transcript){
   alert("attempt your quesation first")
 }else{
 
@@ -61,7 +63,7 @@ if(!userResponse){
       .then((res) => {
         // console.log(res.data);
          setFeedback(res.data);
-         setUserResponse("")
+         setTranscript("")
       })
       .catch((error) => {
         console.error('Error submitting user response:', error);
@@ -108,8 +110,45 @@ useEffect(() => {
   setUserResponse("")
   navigate("/finished")
   }
+  if(seconds<=15){
+    setColor("red")
+  }
 }, [seconds]);
 
+
+
+
+
+// ***************************** Mic Recognise code start************************************ //
+
+
+
+
+
+const recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition)();
+recognition.continuous = true;
+const startRecording = () => {
+  recognition.start();
+  recognition.addEventListener('result', (event) => {
+    const newTranscript = Array.from(event.results)
+      .map((result) => result[0].transcript)
+      .join('');
+
+    setTranscript(newTranscript);
+  });
+
+  return () => {
+    recognition.stop();
+  };
+};
+
+const stopRecording = () => {
+  recognition.stop();
+  setUserResponse(transcript)
+};
+
+
+// ***************************** Mic Recognise code start************************************ //
   return (
     <Box className='container' width={"100%"}  height={"90vh"} display={"flex"} justifyContent={"space-between"} >
 
@@ -123,7 +162,7 @@ useEffect(() => {
 
      <Box className='secondBox' p={4}  width={"90%"}>
       <Box  textAlign={"end"} className='countdown'>
-        <Text as={"b"} color={"green"} fontSize='2xl'>Countdown: {formatTime()}</Text>
+        <Text as={"b"} color={color} fontSize='2xl'>Countdown: {formatTime()}</Text>
       </Box>
      <Text fontSize="2xl" mb={4}>
         Interview Simulator
@@ -143,32 +182,33 @@ useEffect(() => {
      
         <Box width={"100%"}  borderRadius={"5px"} p={"0px 2px"} display={"flex"} justifyContent={"space-between"}>
         <Text as="b">Question: {questions}</Text>
-  <Text>{count} out of 5</Text>
+
+  <Box display={"flex"} gap={3} >
+  <Text marginTop={2}>{count} out of 5</Text>
+  {/* <i className="fa fa-microphone"></i> */}
+  <Button padding={"0px"} colorScheme='none' onClick={startRecording}><i className="fa fa-microphone"></i></Button>
+    <Button onClick={stopRecording}>Stop</Button>
+  </Box>
+
         </Box>
-      {/* {questions.length > 0 && (
-        <Box mb={4}>
-          <Text>Questions:</Text>
-          {questions?.map((question, index) => (
-            <Text key={index} mb={2}>{index}</Text>
-          ))}
-        </Box>
-      )} */}
+    
 
       <VStack spacing={4} mb={2} align="start" display={"flex"}>
         <Textarea
           placeholder="Your response..."
           rows={5}
-          value={userResponse}
-          onChange={(e) => setUserResponse(e.target.value)}
+          id="result"
+          value={transcript}
+          onChange={(e) => setTranscript(e.target.value)}
         />
-        {/* <Button colorScheme="teal" onClick={simulateInterview}>
-          Simulate Interview
-        </Button> */}
+    
+      
 
       <Box  width={"100%"} display={"flex"} justifyContent={"space-between"}>
         <Button colorScheme="teal" onClick={submitResponse}>
           Submit Response
         </Button>
+        
 {count==5?<Button colorScheme="teal" onClick={()=>navigate("/finished")}>
           Finish
         </Button>:count>=1 && count<=5?<Button colorScheme="teal" onClick={startInterview}>
@@ -190,7 +230,7 @@ useEffect(() => {
         </Box>
       )} */}
     </Box>
-
+   
     </Box>
   );
 };
