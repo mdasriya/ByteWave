@@ -58,6 +58,11 @@ https://github.com/mdasriya/ByteWave
 ```
 https://frontend-gray-pi.vercel.app/
 ```
+### backend deployed link
+
+```
+https://crowded-red-pantyhose.cyclic.app
+```
 
 ### Runs the project in the development mode
 
