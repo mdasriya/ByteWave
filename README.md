@@ -70,7 +70,7 @@ NormalToken
 ### To Start Frontend
 
 ```
-npm run start
+npm  start
 ```
 ### To Start Backend Server
 
